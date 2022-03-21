@@ -1,0 +1,53 @@
+{
+  "name": "@dwlib/types",
+  "version": "1.0.0",
+  "description": "Types",
+  "main": "lib/index.js",
+  "imports": {
+    "#intrinsics/*": "@dwlib/intrinsics/abstract/*",
+    "#primordials/*": "@dwlib/primordials/*",
+    "#abstract/*": {
+      "require": "./lib/abstract/*.js",
+      "import": "./lib/abstract/*.mjs"
+    }
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./*": {
+      "require": "./lib/*.js",
+      "import": "./lib/*.mjs"
+    },
+    "./abstract": {
+      "require": "./lib/abstract/index.js",
+      "import": "./lib/abstract/index.mjs"
+    },
+    "./abstract/*": {
+      "require": "./lib/abstract/*.js",
+      "import": "./lib/abstract/*.mjs"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwlib-js/types.git"
+  },
+  "keywords": [
+    "types"
+  ],
+  "author": "Pavel Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwlib-js/types/issues"
+  },
+  "homepage": "https://github.com/dwlib-js/types#readme",
+  "dependencies": {
+    "@dwlib/intrinsics": "^1.0.2",
+    "@dwlib/primordials": "^1.0.3"
+  }
+}
